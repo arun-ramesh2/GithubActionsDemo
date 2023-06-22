@@ -1,4 +1,4 @@
-name: Java CI
+name: CI
 on:
   push:
     branches:
@@ -22,7 +22,7 @@ jobs:
       - name: Set up Maven
         uses: stCarolas/setup-maven@v4.4
         with:
-          maven-version: 3.8.
+          maven-version: 3.8
 
       - name: All the Tests and Coverage check
         run: mvn clean install
