@@ -26,3 +26,6 @@ jobs:
 
       - name: All the Tests and Coverage check
         run: mvn -X clean install
+        
+      - name: Run the spring boot application
+        run: mvn spring-boot:run
