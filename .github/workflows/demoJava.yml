@@ -26,4 +26,3 @@ jobs:
 
       - name: All the Tests and Coverage check
         run: mvn -X clean install
-        
