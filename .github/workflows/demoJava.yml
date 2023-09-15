@@ -32,3 +32,8 @@ jobs:
 
       - name: Start Spring Boot Application
         run: java -jar target/springboot-demo-hello-world-0.0.1-SNAPSHOT.jar & echo $! > app.pid
+        
+      - name: Stop Spring Boot Application
+        run: |
+          kill -TERM $(cat app.pid)
+          rm app.pid
