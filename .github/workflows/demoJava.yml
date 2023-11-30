@@ -38,11 +38,22 @@ jobs:
         #  kill -TERM $(cat app.pid)
         #  rm app.pid
 
-      - name: Fetch secret from external service
-        env:
-          SECRET_VALUE: ${{ secrets.PLATFORM }}
-        run: |
+     # - name: Fetch secret from external service
+      #  env:
+       #   SECRET_VALUE: ${{ secrets.PLATFORM }}
+      #  run: |
           # Fetch the secret from an external service
           # Use the SECRET_VALUE in your workflow
-          echo "The secret is $SECRET_VALUE"
+      #    echo "The secret is $SECRET_VALUE"
+
+
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Use the GitHub Token to access another repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.testlearn }}
+        run: |
+          # Use the GITHUB_TOKEN to clone the other repository or perform other actions
+          git clone https://github.com/helloworld.git
 
