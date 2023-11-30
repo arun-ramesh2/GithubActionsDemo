@@ -55,5 +55,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.testlearn }}
         run: |
           # Use the GITHUB_TOKEN to clone the other repository or perform other actions
-          git clone https://github.com/helloworld.git
+          # git clone https://github.com/helloworld.git
+          echo "The Git ${{secrets.PLATFORM}}"
 
