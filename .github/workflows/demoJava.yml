@@ -47,14 +47,14 @@ jobs:
       #    echo "The secret is $SECRET_VALUE"
 
 
-      - name: Checkout code
-        uses: actions/checkout@v2
+     # - name: Checkout code
+       # uses: actions/checkout@v2
 
-      - name: Use the GitHub Token to access another repository
-        env:
-          GITHUB_TOKEN: ${{ secrets.testlearn }}
-        run: |
+    #  - name: Use the GitHub Token to access another repository
+     #   env:
+     #     GITHUB_TOKEN: ${{ secrets.testlearn }}
+     #   run: |
           # Use the GITHUB_TOKEN to clone the other repository or perform other actions
           # git clone https://github.com/helloworld.git
-          echo "The Git ${{secrets.PLATFORM}}"
+      #    echo "The Git ${{secrets.PLATFORM}}"
 
