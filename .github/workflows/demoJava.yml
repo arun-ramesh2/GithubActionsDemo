@@ -7,31 +7,31 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      #- name: Valid Step
-        #run: echo "This is a valid step"
+      - name: Valid Step
+        run: echo "This is a valid step"
         
-      #- name: checkout
-        #uses: actions/checkout@v3
+      - name: checkout
+        uses: actions/checkout@v3
 
-      #- name: Setup Java
-        #uses: actions/setup-java@v3
-        #with:
-          #java-version: 11
-          #distribution: 'adopt'
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          java-version: 11
+          distribution: 'adopt'
 
-      #- name: Set up Maven
-        #uses: stCarolas/setup-maven@v4.4
-       # with:
-          #maven-version: 3.8.2
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.4
+        with:
+          maven-version: 3.8.2
 
-      #- name: All the Tests and Coverage check
-       # run: mvn -X clean install
+      - name: All the Tests and Coverage check
+        run: mvn -X clean install
 
-     # - name: Build with Maven
-       # run: mvn --batch-mode --update-snapshots package
+      - name: Build with Maven
+        run: mvn --batch-mode --update-snapshots package
 
-     # - name: Start Spring Boot Application
-      #  run: java -jar target/springboot-demo-hello-world-0.0.1-SNAPSHOT.jar & echo $! > app.pid
+      - name: Start Spring Boot Application
+        run: java -jar target/springboot-demo-hello-world-0.0.1-SNAPSHOT.jar & echo $! > app.pid
         
      # - name: Stop Spring Boot Application
       #  run: |
