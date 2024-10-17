@@ -33,11 +33,14 @@ jobs:
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
+    
+    - name: list the files
+      run: ls -ltr 
 
-    # Step 5: Build the Docker image
-    - name: Build Docker image
-      run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest .
+    # # Step 5: Build the Docker image
+    # - name: Build Docker image
+    #   run: docker build -t ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest .
 
-    # Step 6: Push the Docker image to Docker Hub
-    - name: Push Docker image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
+    # # Step 6: Push the Docker image to Docker Hub
+    # - name: Push Docker image
+    #   run: docker push ${{ secrets.DOCKER_USERNAME }}/my-java-app:latest
