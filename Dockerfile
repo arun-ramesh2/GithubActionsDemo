@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/springboot-demo-hello-world-0.0.1-SNAPSHOT.jar /app/my-java-app.jar
 
 # Step 4: Expose the port the app runs on
-EXPOSE 9090
+EXPOSE 8080
 
 # Step 5: Command to run the application
 ENTRYPOINT ["java", "-jar", "my-java-app.jar"]
