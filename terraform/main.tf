@@ -30,7 +30,7 @@ resource "kubernetes_deployment" "java_app" {
         container {
           image = "arunrameshdoc/my-java-app:latest"
           name  = "my-java-app"
-          ports {
+          port {
             container_port = 8080
           }
         }
